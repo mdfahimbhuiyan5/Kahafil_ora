@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
-// IMPORTANT: When images are in the public/assets/ folder, you reference them directly
-// with a root-relative path, without importing them.
-
 const Hero = () => {
-    const [currentHeroImage, setCurrentHeroImage] = useState('public/assets/hero1.png');
+    const [currentHeroImage, setCurrentHeroImage] = useState('/assets/hero1.png'); // Corrected path
 
     return (
         <section className="relative min-h-screen w-full bg-[#EFEAE4] text-gray-800 font-sans overflow-hidden">
@@ -32,8 +29,8 @@ const Hero = () => {
                     src={currentHeroImage}
                     alt="Kahafil Ora"
                     className="w-full h-full object-cover"
-                    onMouseEnter={() => setCurrentHeroImage('public/assets/hero2.png')}
-                    onMouseLeave={() => setCurrentHeroImage('public/assets/hero1.png')}
+                    onMouseEnter={() => setCurrentHeroImage('/assets/hero2.png')} // Corrected path
+                    onMouseLeave={() => setCurrentHeroImage('/assets/hero1.png')} // Corrected path
                     onError={(e) => {
                         e.currentTarget.onerror = null;
                         e.currentTarget.src = 'https://placehold.co/920x780/ccc/333?text=Hero+Image+Error';

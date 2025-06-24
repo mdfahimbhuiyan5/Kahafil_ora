@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 
 // IMPORTANT: When images are in the public/assets/ folder, you reference them directly
 // with a root-relative path, WITHOUT importing them.
-// import hero11 from '../assets/hero11.png'; // This import is now removed.
-// import hero12 from '../assets/hero12.png'; // This import is now removed.
 
 const Hero = () => {
     // State to manage which hero image is displayed, using direct paths for public assets
-    const [currentHeroImage, setCurrentHeroImage] = useState('public/assets/hero11.png');
+    const [currentHeroImage, setCurrentHeroImage] = useState('/assets/hero11.png');  // Corrected the path
 
     return (
         <section className="relative min-h-screen w-full bg-[#F5F1ED] text-gray-800 font-sans py-16 px-8 md:px-20 overflow-hidden">
@@ -57,8 +55,8 @@ const Hero = () => {
                         // Added 'rounded-full' to make the image oval.
                         // Removed transition-transform and transform hover:scale-105 as per the provided image.
                         className="w-[300px] h-[400px] md:w-[350px] md:h-[450px] lg:w-[400px] lg:h-[500px] object-cover rounded-full transition-all duration-300 ease-in-out"
-                        onMouseEnter={() => setCurrentHeroImage('public/assets/hero12.png')} // Direct path for hover image
-                        onMouseLeave={() => setCurrentHeroImage('public/assets/hero11.png')} // Direct path for default image
+                        onMouseEnter={() => setCurrentHeroImage('/assets/hero12.png')} // Direct path for hover image
+                        onMouseLeave={() => setCurrentHeroImage('/assets/hero11.png')} // Direct path for default image
                         onError={(e) => {
                             e.currentTarget.onerror = null;
                             e.currentTarget.src = 'https://placehold.co/400x500/ccc/333?text=Profile+Image+Error';

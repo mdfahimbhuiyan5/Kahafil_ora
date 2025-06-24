@@ -1,5 +1,4 @@
 import React from 'react';
-import solution2 from '../../assets/solution2.png'; // Adjust path if needed
 
 const EducationTechArticle = () => {
   return (
@@ -23,7 +22,7 @@ const EducationTechArticle = () => {
       <article className="max-w-4xl mx-auto prose prose-lg">
         {/* Hero Image */}
         <img
-          src={solution2}
+          src="/assets/solution2.png" // Use root-relative path
           alt="Education Tech"
           className="w-full h-96 object-cover rounded-xl shadow-md mb-8"
           onError={(e) => {

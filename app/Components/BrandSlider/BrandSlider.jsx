@@ -5,7 +5,7 @@ const BrandSlider = () => {
     // Duplicating logos for seamless looping in both directions. Adjust the Array(X) count
     // based on how many logos you want to be visible at once and the desired length of the loop.
     // A higher number provides a longer, smoother continuous animation.
-    const brandLogos = Array(15).fill('app/assets/br1.png'); // Increased count for better loop
+    const brandLogos = Array(15).fill('public/assets/br1.png'); // Increased count for better loop
 
     return (
         // Section for "I help brands to drive results." (Auto-sliding Logos)

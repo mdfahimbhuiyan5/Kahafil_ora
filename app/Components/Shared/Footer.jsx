@@ -13,7 +13,7 @@ const Footer = () => { // Renamed component from Navbar to Footer
                 <img
                     // Image src now points directly to the public/assets folder
                     // Ensure your 'header-banner.png' is located in 'project-root/public/assets/'
-                    src="app/assets/header-banner.png"
+                    src="public/assets/header-banner.png"
                     alt="Company Banner"
                     className="w-full h-full object-cover"
                     onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src='https://placehold.co/1200x200/333/fff?text=Header+Banner'; }}
@@ -26,7 +26,7 @@ const Footer = () => { // Renamed component from Navbar to Footer
                 <img
                     // Updated src to reference 'ora.png' from the public/assets/ directory
                     // Image now uses w-full and object-fill to stretch within its padded container
-                    src="app/assets/ora.png"
+                    src="public/assets/ora.png"
                     alt="KAHAFIL ORA Logo"
                     className="w-full h-full object-fill" // Added w-full, changed object-contain to object-fill, removed px-6 md:px-20
                     onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src='https://placehold.co/1920x218/cccccc/000?text=KAHAFIL+ORA+Image+Error'; }}

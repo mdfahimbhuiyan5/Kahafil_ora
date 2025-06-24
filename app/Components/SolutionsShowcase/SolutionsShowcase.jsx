@@ -7,8 +7,8 @@ const SolutionsShowcase = () => {
     const solutionsData = [
         {
             id: 1,
-            defaultImage: 'app/assets/b1.png', // Placeholder, replace with your actual image
-            hoverImage: 'app/assets/b1.png', // Placeholder, replace with your actual hover image
+            defaultImage: 'public/assets/b1.png', // Placeholder, replace with your actual image
+            hoverImage: 'public/assets/b1.png', // Placeholder, replace with your actual hover image
             category: 'DIGITAL TRANSFORMATION',
             strategy: 'STRATEGY',
             description: 'Helping Businesses Modernize Operations Through Tailored Digital Adoption Plans - Enh.',
@@ -16,8 +16,8 @@ const SolutionsShowcase = () => {
         },
         {
             id: 2,
-            defaultImage: 'app/assets/b2.png', // Placeholder
-            hoverImage: 'app/assets/b2.png', // Placeholder
+            defaultImage: 'public/assets/b2.png', // Placeholder
+            hoverImage: 'public/assets/b2.png', // Placeholder
             category: 'IT INFRASTRUCTURE &',
             strategy: 'CYBERSECURITY',
             description: 'Providing Expert Advice On Building Scalable, Secure Infrastructure—Covering network setu..',
@@ -25,8 +25,8 @@ const SolutionsShowcase = () => {
         },
         {
             id: 3,
-            defaultImage: 'app/assets/b3.png', // Placeholder
-            hoverImage: 'app/assets/b3.png', // Placeholder
+            defaultImage: 'public/assets/b3.png', // Placeholder
+            hoverImage: 'public/assets/b3.png', // Placeholder
             category: 'STARTUP & INNOVATION',
             strategy: 'COACHING',
             description: 'Guiding Early-Stage Founders With Business Modeling, Product-Market Fit, Branding, Team..',
@@ -34,8 +34,8 @@ const SolutionsShowcase = () => {
         },
         {
             id: 4,
-            defaultImage: 'app/assets/b4.png', // Placeholder
-            hoverImage: 'app/assets/b4.png', // Placeholder
+            defaultImage: 'public/assets/b4.png', // Placeholder
+            hoverImage: 'public/assets/b4.png', // Placeholder
             category: 'EDTECH & LEARNING PROGRAM',
             strategy: 'DESIGN',
             description: 'Designing Educational Platforms And Training Programs For Institutions That Want To Empa..',
@@ -43,8 +43,8 @@ const SolutionsShowcase = () => {
         },
         {
             id: 5,
-            defaultImage: 'app/assets/b5.png', // New placeholder image
-            hoverImage: 'app/assets/b5.png', // New placeholder hover image
+            defaultImage: 'apublic/assets/b5.png', // New placeholder image
+            hoverImage: 'public/assets/b5.png', // New placeholder hover image
             category: 'CORPORATE IT TRAINING &',
             strategy: 'WORKSHOPS',
             description: 'Delivering Customized Training For Mid-Level Managers And Teams On Topics Like Digital T..',
@@ -52,8 +52,8 @@ const SolutionsShowcase = () => {
         },
         {
             id: 6,
-            defaultImage: 'app/assets/b6.png', // New placeholder image
-            hoverImage: 'app/assets/b6.png', // New placeholder hover image
+            defaultImage: 'public/assets/b6.png', // New placeholder image
+            hoverImage: 'publicrun/assets/b6.png', // New placeholder hover image
             category: 'HR & TALENT STRATEGY FOR TECH',
             strategy: 'TEAMS',
             description: 'Attaining Organizations On How To Hire, Train, And Retain Top Technical Talent—Focusing O..',

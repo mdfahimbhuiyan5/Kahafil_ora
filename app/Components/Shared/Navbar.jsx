@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // with a root-relative path, without importing them.
 
 const Hero = () => {
-    const [currentHeroImage, setCurrentHeroImage] = useState('app/assets/hero1.png');
+    const [currentHeroImage, setCurrentHeroImage] = useState('public/assets/hero1.png');
 
     return (
         <section className="relative min-h-screen w-full bg-[#EFEAE4] text-gray-800 font-sans overflow-hidden">
@@ -32,8 +32,8 @@ const Hero = () => {
                     src={currentHeroImage}
                     alt="Kahafil Ora"
                     className="w-full h-full object-cover"
-                    onMouseEnter={() => setCurrentHeroImage('app/assets/hero2.png')}
-                    onMouseLeave={() => setCurrentHeroImage('app/assets/hero1.png')}
+                    onMouseEnter={() => setCurrentHeroImage('public/assets/hero2.png')}
+                    onMouseLeave={() => setCurrentHeroImage('public/assets/hero1.png')}
                     onError={(e) => {
                         e.currentTarget.onerror = null;
                         e.currentTarget.src = 'https://placehold.co/920x780/ccc/333?text=Hero+Image+Error';

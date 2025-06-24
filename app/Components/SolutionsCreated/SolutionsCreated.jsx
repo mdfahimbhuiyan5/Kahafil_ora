@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'; // Import the Link component
 const solutionsData = [
   {
     id: 1,
-    image: "app/assets/solution1.png", // Updated image path
+    image: "public/assets/solution1.png", // Updated image path
     category: "Cybersecurity",
     date: "May 25, 2025",
     title: "Why Cybersecurity Is No Longer Optional For Businesses",
@@ -13,7 +13,7 @@ const solutionsData = [
   },
   {
     id: 2,
-    image: "app/assets/solution2.png", // Updated image path
+    image: "public/assets/solution2.png", // Updated image path
     category: "Education, Social Impact",
     date: "May 25, 2025",
     title: "Tech For Good: How Codeinnovior Is Shaping Future Innovators",

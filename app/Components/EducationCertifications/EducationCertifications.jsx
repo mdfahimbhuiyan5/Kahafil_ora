@@ -53,8 +53,18 @@ const certificationsData = [
 
 const EducationCertifications = () => {
     return (
-        <section className="bg-[#EFEAE4] py-20 px-8 md:px-20 text-gray-800 font-sans">
-            <h2 className="text-4xl md:text-5xl font-normal text-center text-gray-900 mb-16">
+        <section className="bg-[#EFEAE4] py-20 px-8 md:px-20 text-gray-800"> {/* Removed font-amiri from section as specific elements will have their own fonts */}
+            <h2
+                className="text-center text-gray-900 mb-16"
+                style={{
+                    fontFamily: 'Amiri, serif',
+                    fontWeight: 400,
+                    fontSize: '60px',
+                    lineHeight: '100%',
+                    letterSpacing: '0em', // 0% letter-spacing
+                    textTransform: 'capitalize',
+                }}
+            >
                 Education & Certifications
             </h2>
 
@@ -63,21 +73,92 @@ const EducationCertifications = () => {
                 <div className="col-span-1 flex flex-col space-y-8">
                     {educationData.map((item, index) => (
                         <div key={index} className="flex flex-col">
-                            <p className="text-gray-500 text-sm mb-1">{item.year}</p>
-                            <h3 className="text-lg font-bold text-gray-900 mb-1">{item.degree}</h3>
-                            <p className="text-gray-700 text-base">{item.institution}</p>
+                            <p
+                                className="text-gray-500 mb-1"
+                                style={{
+                                    fontFamily: "'Fragment Mono', monospace",
+                                    fontWeight: 400,
+                                    fontSize: '22px',
+                                    lineHeight: '100%',
+                                    letterSpacing: '0em', // 0% letter-spacing
+                                    textTransform: 'uppercase',
+                                }}
+                            >
+                                {item.year}
+                            </p>
+                            <h3
+                                className="text-gray-900 mb-1"
+                                style={{
+                                    fontFamily: 'Amiri, serif',
+                                    fontWeight: 400,
+                                    fontSize: '30px',
+                                    lineHeight: '200%',
+                                    letterSpacing: '0.02em', // 2% letter-spacing
+                                    textTransform: 'capitalize',
+                                }}
+                            >
+                                {item.degree}
+                            </h3>
+                            <p
+                                className="text-gray-700"
+                                style={{
+                                    fontFamily: 'Poppins, sans-serif',
+                                    fontWeight: 300,
+                                    fontSize: '20px',
+                                    lineHeight: '200%',
+                                    letterSpacing: '0.02em', // 2% letter-spacing
+                                    textTransform: 'capitalize',
+                                }}
+                            >
+                                {item.institution}
+                            </p>
                         </div>
                     ))}
                 </div>
 
                 {/* Certifications Columns */}
-                {/* Displaying certifications in two columns on larger screens */}
                 <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8">
                     {certificationsData.map((item, index) => (
                         <div key={index} className="flex flex-col">
-                            <p className="text-gray-500 text-sm mb-1">{item.year}</p>
-                            <h3 className="text-lg font-bold text-gray-900 mb-1">{item.name}</h3>
-                            <p className="text-gray-700 text-base">{item.issuer}</p>
+                            <p
+                                className="text-gray-500 mb-1"
+                                style={{
+                                    fontFamily: "'Fragment Mono', monospace",
+                                    fontWeight: 400,
+                                    fontSize: '22px',
+                                    lineHeight: '100%',
+                                    letterSpacing: '0em', // 0% letter-spacing
+                                    textTransform: 'uppercase',
+                                }}
+                            >
+                                {item.year}
+                            </p>
+                            <h3
+                                className="text-gray-900 mb-1"
+                                style={{
+                                    fontFamily: 'Amiri, serif',
+                                    fontWeight: 400,
+                                    fontSize: '30px',
+                                    lineHeight: '200%',
+                                    letterSpacing: '0.02em', // 2% letter-spacing
+                                    textTransform: 'capitalize',
+                                }}
+                            >
+                                {item.name}
+                            </h3>
+                            <p
+                                className="text-gray-700"
+                                style={{
+                                    fontFamily: 'Poppins, sans-serif',
+                                    fontWeight: 300,
+                                    fontSize: '20px',
+                                    lineHeight: '200%',
+                                    letterSpacing: '0.02em', // 2% letter-spacing
+                                    textTransform: 'capitalize',
+                                }}
+                            >
+                                {item.issuer}
+                            </p>
                         </div>
                     ))}
                 </div>

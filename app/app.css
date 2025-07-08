@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+/* Import fonts first */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400&display=swap'); /* Added Amiri font import */
+
+
+/* Import Tailwind after the fonts */
 @import "tailwindcss";
 
 /* Custom theme variables */
@@ -11,12 +18,18 @@
 html,
 body {
   @apply bg-white dark:bg-gray-950;
+  overflow-x: hidden;
+
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
 }
 
+.poppins-font {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* Corrected to number */
+}
 /* Custom class for experience heading */
 .experience-heading {
   font-family: 'Poppins', sans-serif;
@@ -25,6 +38,7 @@ body {
   line-height: 100%;
   letter-spacing: 0%;
 }
+
 .metric-heading {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -33,6 +47,9 @@ body {
   letter-spacing: 0%;
   text-transform: lowercase;
 }
-.poppins-font {
-  font-family: 'Poppins', sans-serif;
+
+/* Apply Plus Jakarta Sans */
+.font-jakarta {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400; /* Explicitly set weight 400 */
 }

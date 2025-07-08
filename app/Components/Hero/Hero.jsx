@@ -1,62 +1,149 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Import useState
 
-// IMPORTANT: When images are in the public/assets/ folder, you reference them directly
-// with a root-relative path, WITHOUT importing them.
+// IMPORTANT: When images are in the public/assets/ folder, reference them directly with root-relative paths.
 
 const Hero = () => {
-    // State to manage which hero image is displayed, using direct paths for public assets
-    const [currentHeroImage, setCurrentHeroImage] = useState('/assets/hero11.png');  // Corrected the path
+    const [currentHeroImage, setCurrentHeroImage] = useState('/assets/hero11.png'); // Initial image
 
     return (
         <section className="relative min-h-screen w-full bg-[#F5F1ED] text-gray-800 font-sans py-16 px-8 md:px-20 overflow-hidden">
 
             {/* "ABOUT KAHAFIL ORA" Section */}
-            <div className="text-center mb-16 pt-12">
-                <h2 className="text-sm uppercase font-medium text-gray-600 mb-4">ABOUT KAHAFIL ORA</h2>
-                <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto text-gray-900 px-4">
-                    Kahafil Ora Is An Experienced IT Consultant Known For Delivering Smart, Tech-Driven Solutions To Businesses. With A Strong Grasp Of IT Infrastructure And Digital Strategy, He Helps Organizations Improve Efficiency And Achieve Their Goals Through Innovative Technology
-                </p>
+            <div className="text-center mb-16 pt-12 font-poppins">
+                <h2
+                    className="mb-4 text-gray-600"
+                    style={{
+                        fontFamily: "'Fragment Mono', monospace",
+                        fontWeight: 400,
+                        fontSize: '18px',
+                        lineHeight: '100%',
+                        letterSpacing: '0em',
+                        textTransform: 'uppercase',
+                        opacity: '50%',
+                    }}
+                >
+
+                    ABOUT KAHAFIL ORA
+                </h2>
+               <div className="mx-auto text-gray-900 px-4" style={{
+    font: 'Poppins',
+    fontWeight: 300,
+    fontSize: '35px',
+    lineHeight: '100%',
+    letterSpacing: '0em',
+    textAlign: 'center',
+    textTransform: 'capitalize',
+    width: '1440px',
+    height: '212px',
+}}>
+     <div className="flex flex-col items-center space-y-[10px]">
+    <p>Kahafil Ora is an experienced IT Consultant known for delivering smart, tech-</p>
+    <p>driven solutions to businesses. With a strong grasp of IT infrastructure and digital </p>
+    <p>strategy, he helps organizations improve efficiency and achieve their goals</p>
+    <p>through innovative technology</p>
+  </div>
+</div>
             </div>
 
             {/* Divider Line */}
             <div className="border-b border-gray-300 w-full max-w-6xl mx-auto mb-16"></div>
 
-            {/* Main Content Grid: Left Text, Center Image, Right Metrics */}
+            {/* Main Content Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto items-center">
 
-                {/* Left Column: Driving Digital Innovation & Contact */}
+                {/* Left Column */}
                 <div className="flex flex-col space-y-12 text-gray-800">
                     <div>
-                        <p className="text-xs uppercase font-medium text-gray-600 mb-2">DRIVING DIGITAL INNOVATION ACROSS</p>
-                        <p className="text-xs uppercase font-medium text-gray-600">BANGLADESH AND BEYOND</p>
-                        <ul className="mt-4 text-base space-y-1">
-                            <li>Mentor</li>
-                            <li>IT Strategist</li>
-                            <li>Tech Entrepreneur</li>
-                            <li>Cybersecurity Advocate</li>
-                        </ul>
-                    </div>
+                        <div style={{ opacity: 0.5 }}>
+  <p
+    className="mb-2"
+    style={{
+      fontFamily: "'Fragment Mono', monospace",
+      fontWeight: 400,
+      fontSize: '22px',
+      lineHeight: '100%',
+      letterSpacing: '0em',
+      textTransform: 'uppercase',
+      color: '#4B5563', // Tailwind's text-gray-600
+    }}
+  >
+    DRIVING DIGITAL INNOVATION ACROSS
+  </p>
+  <p
+    style={{
+      fontFamily: "'Fragment Mono', monospace",
+      fontWeight: 400,
+      fontSize: '22px',
+      lineHeight: '100%',
+      letterSpacing: '0em',
+      textTransform: 'uppercase',
+      color: '#4B5563',
+    }}
+  >
+    BANGLADESH AND BEYOND
+  </p>
+</div>
+                       <ul
+  className="mt-4 space-y-1"
+  style={{
+    fontFamily: "'Poppins', sans-serif",
+    fontWeight: 300,
+    fontSize: '20px',
+    lineHeight: '200%',
+    letterSpacing: '0.02em',
+    textTransform: 'capitalize',
+    color: '#1F2937', // Tailwind's text-gray-800 (optional for visual match)
+  }}
+>
+  <li>Mentor</li>
+  <li>IT Strategist</li>
+  <li>Tech Entrepreneur</li>
+  <li>Cybersecurity Advocate</li>
+</ul>
 
+                    </div>
                     <div>
-                        <p className="text-xs uppercase font-medium text-gray-600 mb-2">CONTACT</p>
-                        <p className="text-base">Kahafil Ora</p>
-                        <p className="text-base">Dhaka | Bangladesh</p>
-                        <p className="text-base">+880 1622-992222</p>
-                        <p className="text-base">kahafil@goinnovior.com</p>
+                        <p
+    style={{
+      fontFamily: "'Fragment Mono', monospace",
+      fontWeight: 400,
+      fontSize: '22px',
+      lineHeight: '100%',
+      letterSpacing: '0em',
+      textTransform: 'uppercase',
+      color: '#4B5563',
+      opacity: '50%',
+    }}
+  >
+    CONTACT
+  </p>
+                       <div
+  style={{
+    fontFamily: "'Poppins', sans-serif",
+    fontWeight: 300,
+    fontSize: '20px',
+    lineHeight: '200%',
+    letterSpacing: '0.02em',
+    textTransform: 'capitalize',
+    color: '#1F2937', // Optional: Tailwind's text-gray-800
+  }}
+>
+  <p>Kahafil Ora</p>
+  <p>Dhaka | Bangladesh</p>
+  <p>+880 1622-992222</p>
+  <p>kahafil@goinnovior.com</p>
+</div>
                     </div>
                 </div>
 
-                {/* Center Column: Image with Hover Effect */}
+                {/* Center Image */}
                 <div className="flex justify-center items-center relative lg:col-span-1">
-                    {/* The image is now explicitly given a fixed width and height for consistency with the layout */}
                     <img
                         src={currentHeroImage}
                         alt="Kahafil Ora Profile"
-                        // Added 'rounded-full' to make the image oval.
-                        // Removed transition-transform and transform hover:scale-105 as per the provided image.
                         className="w-[300px] h-[400px] md:w-[350px] md:h-[450px] lg:w-[400px] lg:h-[500px] object-cover rounded-full transition-all duration-300 ease-in-out"
-                        onMouseEnter={() => setCurrentHeroImage('/assets/hero12.png')} // Direct path for hover image
-                        onMouseLeave={() => setCurrentHeroImage('/assets/hero11.png')} // Direct path for default image
+                        onMouseEnter={() => setCurrentHeroImage('/assets/hero12.png')}
+                        onMouseLeave={() => setCurrentHeroImage('/assets/hero11.png')}
                         onError={(e) => {
                             e.currentTarget.onerror = null;
                             e.currentTarget.src = 'https://placehold.co/400x500/ccc/333?text=Profile+Image+Error';
@@ -64,27 +151,72 @@ const Hero = () => {
                     />
                 </div>
 
-                {/* Right Column: Years of Experience, Satisfaction, Clients Worldwide */}
+                {/* Right Column: Metrics */}
                 <div className="flex flex-col justify-between text-gray-800 space-y-12 lg:col-span-1">
                     <div className="text-right">
-                        <p className="text-xs uppercase font-medium text-gray-600 mb-2">YEARS OF EXPERIENCE</p>
+                        <p
+    style={{
+      fontFamily: "'Fragment Mono', monospace",
+      fontWeight: 400,
+      fontSize: '22px',
+      lineHeight: '100%',
+      letterSpacing: '0em',
+      textTransform: 'uppercase',
+      color: '#4B5563',
+      opacity:'50%',
+    }}
+  >
+    Years of Experience
+  </p>
                         <div className="flex items-center justify-end">
-                            <span className="text-6xl font-semibold mr-2">22+</span>
-                            {/* SVG for the 'M' like icon */}
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-red-500">
-                                <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM11 15V13H13V15H11ZM11 9V7H13V9H11Z"/>
-                            </svg>
+                            <span
+                                style={{
+                                    fontFamily: 'Poppins, sans-serif',
+                                    fontWeight: 300,
+                                    fontSize: '80px',
+                                    lineHeight: '100%',
+                                    letterSpacing: '0.01em', // 1% letter-spacing
+                                    textTransform: 'capitalize',
+                                    verticalAlign: 'middle', // Added vertical-align
+                                }}
+                                className="mr-2" // Kept mr-2 for spacing with SVG
+                            >
+                                22+
+                            </span>
+                          
                         </div>
                     </div>
-
                     <div className="text-right">
                         <p className="text-xs uppercase font-medium text-gray-600 mb-2">SATISFACTION CLIENTS</p>
-                        <p className="text-6xl font-semibold">100%</p>
+                        <span
+                            style={{
+                                fontFamily: 'Poppins, sans-serif',
+                                fontWeight: 300,
+                                fontSize: '80px',
+                                lineHeight: '100%',
+                                letterSpacing: '0.01em', // 1% letter-spacing
+                                textTransform: 'capitalize',
+                                verticalAlign: 'middle', // Added vertical-align
+                            }}
+                        >
+                            100%
+                        </span>
                     </div>
-
                     <div className="text-right">
                         <p className="text-xs uppercase font-medium text-gray-600 mb-2">CLIENTS ON WORLDWIDE</p>
-                        <p className="text-6xl font-semibold">70+</p>
+                        <span
+                            style={{
+                                fontFamily: 'Poppins, sans-serif',
+                                fontWeight: 300,
+                                fontSize: '80px',
+                                lineHeight: '100%',
+                                letterSpacing: '0.01em', // 1% letter-spacing
+                                textTransform: 'capitalize',
+                                verticalAlign: 'middle', // Added vertical-align
+                            }}
+                        >
+                            70+
+                        </span>
                     </div>
                 </div>
             </div>

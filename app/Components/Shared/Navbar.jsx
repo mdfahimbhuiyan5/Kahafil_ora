@@ -44,8 +44,8 @@ const Hero = () => {
                     src={currentHeroImage}
                     alt="Kahafil Ora"
                     className="w-full h-full object-cover"
-                    onMouseEnter={() => setCurrentHeroImage('public/assets/hero2.png')}
-                    onMouseLeave={() => setCurrentHeroImage('public/assets/hero1.png')}
+                    onMouseEnter={() => setCurrentHeroImage('/assets/hero2.png')}
+                    onMouseLeave={() => setCurrentHeroImage('/assets/hero1.png')}
                     onError={(e) => {
                         e.currentTarget.onerror = null;
                         e.currentTarget.src = 'https://placehold.co/920x780/ccc/333?text=Hero+Image+Error';

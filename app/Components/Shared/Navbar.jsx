@@ -46,6 +46,7 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                     onMouseEnter={() => setCurrentHeroImage('/assets/hero2.png')}
                     onMouseLeave={() => setCurrentHeroImage('/assets/hero1.png')}
+
                     onError={(e) => {
                         e.currentTarget.onerror = null;
                         e.currentTarget.src = 'https://placehold.co/920x780/ccc/333?text=Hero+Image+Error';

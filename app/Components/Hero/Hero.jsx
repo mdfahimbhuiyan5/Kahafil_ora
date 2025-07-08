@@ -1,9 +1,15 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useState, useEffect } from 'react'; // Import useEffect
 
 // IMPORTANT: When images are in the public/assets/ folder, reference them directly with root-relative paths.
 
 const Hero = () => {
-    const [currentHeroImage, setCurrentHeroImage] = useState('/assets/hero11.png'); // Initial image
+    const [currentHeroImage, setCurrentHeroImage] = useState('public/assets/hero11.png'); // Initial image
+
+    // Preload the hover image when the component mounts
+    useEffect(() => {
+        const hoverImage = new Image();
+        hoverImage.src = 'public/assets/hero12.png';
+    }, []); // Empty dependency array ensures this runs only once on mount
 
     return (
         <section className="relative min-h-screen w-full bg-[#F5F1ED] text-gray-800 font-sans py-16 px-8 md:px-20 overflow-hidden">
@@ -141,7 +147,7 @@ const Hero = () => {
                     <img
                         src={currentHeroImage}
                         alt="Kahafil Ora Profile"
-                        className="w-[300px] h-[400px] md:w-[350px] md:h-[450px] lg:w-[400px] lg:h-[500px] object-cover rounded-full transition-all duration-300 ease-in-out"
+                        className="w-[300px] h-[400px] md:w-[350px] md:h-[450px] lg:w-[400px] lg:h-[500px] object-cover rounded-full transition-all duration-700 ease-in-out" // Changed duration to 700ms
                         onMouseEnter={() => setCurrentHeroImage('/assets/hero12.png')}
                         onMouseLeave={() => setCurrentHeroImage('/assets/hero11.png')}
                         onError={(e) => {
@@ -179,11 +185,9 @@ const Hero = () => {
                                     textTransform: 'capitalize',
                                     verticalAlign: 'middle', // Added vertical-align
                                 }}
-                                className="mr-2" // Kept mr-2 for spacing with SVG
                             >
                                 22+
                             </span>
-                          
                         </div>
                     </div>
                     <div className="text-right">

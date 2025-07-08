@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react'; // Import useEffect
 // IMPORTANT: When images are in the public/assets/ folder, reference them directly with root-relative paths.
 
 const Hero = () => {
-    const [currentHeroImage, setCurrentHeroImage] = useState('public/assets/hero11.png'); // Initial image
+    const [currentHeroImage, setCurrentHeroImage] = useState('/assets/hero11.png'); // Initial image
 
     // Preload the hover image when the component mounts
     useEffect(() => {
         const hoverImage = new Image();
-        hoverImage.src = 'public/assets/hero12.png';
+        hoverImage.src = '/assets/hero12.png';
     }, []); // Empty dependency array ensures this runs only once on mount
 
     return (

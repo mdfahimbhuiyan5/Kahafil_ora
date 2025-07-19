@@ -18,7 +18,7 @@ const Hero = () => {
       ></div>
 
       {/* Hero Image */}
-      <div className="absolute z-10 top-[8vh] sm:top-[10vh] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[900px] h-auto">
+      <div className="absolute z-10 top-[8vh] md:top-[10vh] left-1/2 transform -translate-x-1/2 w-[92vw] max-w-[900px] h-auto px-2">
         <img
           src={currentHeroImage}
           alt="Kahafil Ora"
@@ -38,7 +38,7 @@ const Hero = () => {
         style={{
           fontFamily: 'Poppins',
           fontWeight: 700,
-          fontSize: 'clamp(40px, 8vw, 150px)',
+          fontSize: 'clamp(36px, 8vw, 150px)',
           WebkitTextStroke: '2px #444444',
           color: '#444444',
         }}
@@ -53,7 +53,7 @@ const Hero = () => {
           style={{
             fontFamily: 'Poppins',
             fontWeight: 700,
-            fontSize: 'clamp(40px, 8vw, 150px)',
+            fontSize: 'clamp(36px, 8vw, 150px)',
             WebkitTextStroke: '2px #444444',
             color: '#444444',
           }}
@@ -61,7 +61,7 @@ const Hero = () => {
           KAHAFIL
         </h1>
         <p
-          className="mt-2"
+          className="mt-1"
           style={{
             fontFamily: 'Plus Jakarta Sans',
             fontWeight: 700,
@@ -73,11 +73,11 @@ const Hero = () => {
           2K25
         </p>
 
-        <div className="mt-6 sm:mt-8 flex flex-col items-start">
-          <div className="w-[2px] h-[80px] sm:h-[100px] bg-gray-600 mb-3 ml-3"></div>
+        <div className="mt-6 flex flex-col items-start">
+          <div className="w-[2px] h-[70px] sm:h-[100px] bg-gray-600 mb-3 ml-3"></div>
           <a
             href="#"
-            className="text-lg sm:text-xl text-gray-700 hover:text-purple-600 ml-2"
+            className="text-sm sm:text-xl text-gray-700 hover:text-purple-600 ml-2"
             style={{
               writingMode: 'vertical-lr',
               textOrientation: 'mixed',
@@ -91,9 +91,8 @@ const Hero = () => {
 
       {/* Biography */}
       <div
-        className="absolute z-30 text-right top-[20vh] sm:top-[25vh] right-4 sm:right-5"
+        className="absolute z-30 text-right top-[20vh] right-4 sm:right-6 max-w-[90vw] sm:max-w-[40vw]"
         style={{
-          width: 'clamp(240px, 45vw, 600px)',
           fontSize: 'clamp(13px, 1.1vw, 20px)',
           lineHeight: '160%',
           fontFamily: 'Plus Jakarta Sans',
@@ -118,8 +117,8 @@ const Hero = () => {
       <div
         className="absolute z-30 flex items-center"
         style={{
-          top: '65%',
-          left: '15%',
+          top: '66%',
+          left: '8%',
           transform: 'translateY(-50%)',
           fontFamily: 'Fragment Mono',
           fontSize: 'clamp(13px, 1.5vw, 22px)',
@@ -127,12 +126,12 @@ const Hero = () => {
           textTransform: 'uppercase',
         }}
       >
-        <p className="mr-4">IT CONSULTANT</p>
+        <p className="mr-3">IT CONSULTANT</p>
         <img
           src="/assets/arrow.png"
           alt="Arrow"
           style={{
-            width: 'clamp(70px, 8vw, 156px)',
+            width: 'clamp(60px, 7vw, 150px)',
             height: 'auto',
             objectFit: 'contain',
             rotate: '19.82deg',
@@ -141,7 +140,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down */}
-      <div className="absolute bottom-3 left-4 sm:left-6 text-gray-600 z-30">
+      <div className="absolute bottom-3 left-3 sm:left-6 text-gray-600 z-30">
         <p className="text-xs sm:text-sm uppercase font-medium mb-1">Scroll Down</p>
         <span className="text-lg sm:text-xl">↓</span>
       </div>

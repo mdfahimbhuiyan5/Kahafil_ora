@@ -18,7 +18,7 @@ const Hero = () => {
       ></div>
 
       {/* Hero Image */}
-      <div className="absolute z-10 top-[10vh] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[900px] h-auto">
+      <div className="absolute z-10 top-[8vh] sm:top-[10vh] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[900px] h-auto">
         <img
           src={currentHeroImage}
           alt="Kahafil Ora"
@@ -31,7 +31,8 @@ const Hero = () => {
           }}
         />
       </div>
-        {/* ORA Title */}
+
+      {/* ORA Title */}
       <p
         className="absolute bottom-0 right-4 z-50 pb-4 uppercase leading-none"
         style={{
@@ -45,8 +46,8 @@ const Hero = () => {
         ORA
       </p>
 
-      {/* KAHAFIL, 2K25, Portfolio (lowered + left) */}
-      <div className="absolute z-30 left-6 bottom-[25%] text-left">
+      {/* KAHAFIL, 2K25, PORTFOLIO */}
+      <div className="absolute z-30 left-4 sm:left-6 bottom-[22%] sm:bottom-[25%] text-left">
         <h1
           className="uppercase leading-none"
           style={{
@@ -64,7 +65,7 @@ const Hero = () => {
           style={{
             fontFamily: 'Plus Jakarta Sans',
             fontWeight: 700,
-            fontSize: 'clamp(16px, 2vw, 30px)',
+            fontSize: 'clamp(14px, 2vw, 30px)',
             color: '#4B5563',
             textTransform: 'uppercase',
           }}
@@ -72,11 +73,11 @@ const Hero = () => {
           2K25
         </p>
 
-        <div className="mt-8 flex flex-col items-start">
-          <div className="w-[2px] h-[100px] bg-gray-600 mb-4 ml-3"></div>
+        <div className="mt-6 sm:mt-8 flex flex-col items-start">
+          <div className="w-[2px] h-[80px] sm:h-[100px] bg-gray-600 mb-3 ml-3"></div>
           <a
             href="#"
-            className="text-xl text-gray-700 hover:text-purple-600 ml-2"
+            className="text-lg sm:text-xl text-gray-700 hover:text-purple-600 ml-2"
             style={{
               writingMode: 'vertical-lr',
               textOrientation: 'mixed',
@@ -88,12 +89,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Biography (top right, same) */}
+      {/* Biography */}
       <div
-        className="absolute z-30 text-right top-[25vh] right-5"
+        className="absolute z-30 text-right top-[20vh] sm:top-[25vh] right-4 sm:right-5"
         style={{
-          width: 'clamp(280px, 35vw, 600px)',
-          fontSize: 'clamp(14px, 1.2vw, 20px)',
+          width: 'clamp(240px, 45vw, 600px)',
+          fontSize: 'clamp(13px, 1.1vw, 20px)',
           lineHeight: '160%',
           fontFamily: 'Plus Jakarta Sans',
         }}
@@ -102,7 +103,7 @@ const Hero = () => {
           className="text-gray-500 opacity-40 mb-2 uppercase"
           style={{
             fontFamily: 'Fragment Mono',
-            fontSize: 'clamp(16px, 1.5vw, 25px)',
+            fontSize: 'clamp(14px, 1.5vw, 25px)',
           }}
         >
           Biography
@@ -113,41 +114,39 @@ const Hero = () => {
         </p>
       </div>
 
-      {/* IT CONSULTANT + Arrow (moved left under text) */}
-     <div
-  className="absolute z-30 flex items-center"
-  style={{
-    top: 'calc(60% )', // Move slightly higher (reduce 25% of the container height)
-    left: 'calc(20% )', // Move a bit right from the center (adjust as needed)
-    transform: 'translateY(-50%)', // Keep vertical centering relative to top position
-    fontFamily: 'Fragment Mono',
-    fontSize: 'clamp(14px, 1.5vw, 22px)',
-    color: '#4B5563',
-    textTransform: 'uppercase',
-  }}
->
-  <p className="mr-4">IT CONSULTANT</p>
-  <img
-    src="/assets/arrow.png"
-    alt="Arrow"
-    style={{
-      width: 'clamp(80px, 8vw, 156px)',
-      height: 'auto',
-      objectFit: 'contain',
-      rotate: '19.82deg',
-    }}
-  />
-</div>
+      {/* IT CONSULTANT + Arrow */}
+      <div
+        className="absolute z-30 flex items-center"
+        style={{
+          top: '65%',
+          left: '15%',
+          transform: 'translateY(-50%)',
+          fontFamily: 'Fragment Mono',
+          fontSize: 'clamp(13px, 1.5vw, 22px)',
+          color: '#4B5563',
+          textTransform: 'uppercase',
+        }}
+      >
+        <p className="mr-4">IT CONSULTANT</p>
+        <img
+          src="/assets/arrow.png"
+          alt="Arrow"
+          style={{
+            width: 'clamp(70px, 8vw, 156px)',
+            height: 'auto',
+            objectFit: 'contain',
+            rotate: '19.82deg',
+          }}
+        />
+      </div>
 
-
-      {/* Scroll Down (left bottom corner) */}
-      <div className="absolute bottom-4 left-6 text-gray-600 z-30">
-        <p className="text-sm uppercase font-medium mb-1">Scroll Down</p>
-        <span className="text-xl">↓</span>
+      {/* Scroll Down */}
+      <div className="absolute bottom-3 left-4 sm:left-6 text-gray-600 z-30">
+        <p className="text-xs sm:text-sm uppercase font-medium mb-1">Scroll Down</p>
+        <span className="text-lg sm:text-xl">↓</span>
       </div>
     </section>
   );
 };
-
 
 export default Hero;
